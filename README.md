@@ -11,10 +11,9 @@ La excepción DimensionError permite especificar un mensaje de error, la dimensi
 Estas instrucciones te guiarán para obtener una copia de este proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
 Clonar el repositorio
-bash
-Copy code
+```bash
 git clone urlgit
-
+```
 
 ### Prerrequisitos 📋
 Python 3.x
