@@ -35,10 +35,12 @@ class Foto():
             ancho (int): El nuevo ancho de la foto.
 
         Raises:
-            DimensionError: Si el nuevo ancho es menor o igual a cero.
+            DimensionError: Si el nuevo ancho es menor o igual a cero o excede el tamaño máximo permitido.
         """
         if ancho <= 0:
             raise DimensionError("El ancho debe ser mayor que cero", dimension="Ancho", maximo=self.MAX)
+        if ancho > self.MAX:
+            raise DimensionError(f"El ancho excede el máximo permitido de {self.MAX}", dimension="Ancho", maximo=self.MAX)
         self.__ancho = ancho
 
     @property
@@ -60,8 +62,10 @@ class Foto():
             alto (int): El nuevo alto de la foto.
 
         Raises:
-            DimensionError: Si el nuevo alto es menor o igual a cero.
+            DimensionError: Si el nuevo alto es menor o igual a cero o excede el tamaño máximo permitido.
         """
         if alto <= 0:
             raise DimensionError("El alto debe ser mayor que cero", dimension="Alto", maximo=self.MAX)
+        if alto > self.MAX:
+            raise DimensionError(f"El alto excede el máximo permitido de {self.MAX}", dimension="Alto", maximo=self.MAX)
         self.__alto = alto
